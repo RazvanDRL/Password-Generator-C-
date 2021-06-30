@@ -4,18 +4,18 @@
 #include <ctime>
 using namespace std;
 
-ofstream g("password.out");
+ofstream g("password.txt");
 
 int main() 
 {
 	int i, randomSymbol=rand();
 
 	char answer;
-	cout<<"Start the generator? (Y/N)\n";
+	cout<<"Welcome to the Random Password Generator\nStart the generator? (Y/N)\n";
   	cin>>answer;
   	if(answer=='Y'||answer=='y')
   	{
-		cout<<"How strong should your password be? (max 2048)\n";
+		cout<<"How strong should your password be? (max 128)\n";
 		cin>>i;
 		if(i>0&&i<=128)
 		{
@@ -27,7 +27,7 @@ int main()
 			}
 			g<<"\n\n~ Password containing "<<i<<" symbols ~";
 			g<<"\n~ Restart the program to generate another password ~";
-			cout<<"Check password.out";
+			cout<<"Check password.txt to access your custom password\n";
 		}
 		else
 		{
